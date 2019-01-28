@@ -1,6 +1,7 @@
 // import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 declare var PouchDB;
+import { BehaviorSubject } from 'rxjs';
 
 /*
   Generated class for the DatabaseProvider provider.
@@ -11,8 +12,11 @@ declare var PouchDB;
 @Injectable()
 export class DatabaseProvider {
   db;
+  entriesSource = new BehaviorSubject([]);
+  entries = this.entriesSource.asObservable();
   constructor() {
     console.log('Hello DatabaseProvider Provider');
+
   }
 
   createDatabase() {

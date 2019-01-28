@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController } from 'ionic-angular';
+import { NavController, AlertController, App, ModalController } from 'ionic-angular';
 import { DatabaseProvider } from '../../providers/database/database';
 import { Entry } from '../../model/entry';
+import { Subscription } from 'rxjs';
+import { SelectEmotionPage } from '../select-emotion/select-emotion';
 
 @Component({
   selector: 'page-about',
@@ -10,33 +12,45 @@ import { Entry } from '../../model/entry';
 export class AboutPage {
   name: String = '';
   entries: Array<Entry> = [];
-  constructor(public navCtrl: NavController, public database: DatabaseProvider, public alert: AlertController) {
+  $subscription: Subscription;
+  constructor(public navCtrl: NavController, public database: DatabaseProvider, public alert: AlertController, private app: App, public modal: ModalController) {
+    console.log('entriesPage')
     this.database.getAllDocs().then(res => {
       const rows: Array<any> = res.rows;
       this.name = rows.filter(row => row.doc.type === 'user')[0].doc.name;
     })  
     this.database.getAllDocs().then(res => {
       const rows: Array<any> = res.rows;
-      this.entries = rows.filter(row => row.doc.type === 'entry').reverse();
-      console.log(this.entries)
+     const entries = rows.filter(row => row.doc.type === 'entry').reverse();
+     this.database.entriesSource.next(entries);
     })  
+    this.$subscription = this.database.entries.subscribe(res => {
+      console.log(res)
+      this.entries = res;
+    })
+    
   }
  async deleteEntry(id , rev) {
     const alert = await this.alert.create({
-      message: 'Are you sure you want to <strong>delete?</strong>',
+      message: 'Are you sure you want to <strong>delete</strong> this entry?',
+      title: 'Confirmation!',
       buttons: [
         {
-          text: 'Cancel',
+          text: 'No',
           role: 'cancel',
           cssClass: 'secondary',
           handler: (blah) => {
             console.log('Confirm Cancel: blah');
           }
         }, {
-          text: 'Okay',
+          text: 'Yes',
           handler: () => {
             this.database.deleteEntry(id , rev).then(res => {
-              console.log(res);
+              this.database.getAllDocs().then(res => {
+                const rows: Array<any> = res.rows;
+               const entries = rows.filter(row => row.doc.type === 'entry').reverse();
+               this.database.entriesSource.next(entries);
+              })  
             })
           }
         }
@@ -46,4 +60,8 @@ export class AboutPage {
     await alert.present();
   }
 
+  createEntry() {
+    const modal = this.modal.create(SelectEmotionPage);
+    modal.present();
+  }
 }

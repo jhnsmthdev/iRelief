@@ -44,7 +44,7 @@ page-about {
   }
 
   .angry {
-    color: #E84C3D;
+    color: #E84C3D;   
   }
 
   .disgust {
@@ -53,4 +53,9 @@ page-about {
   ion-badge.custom {
     margin-right: 5px;
   }
+  .card {
+    border-radius: 10px;
+    margin: 20px 10px; 
+  }
+ 
 }

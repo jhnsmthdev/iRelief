@@ -15,7 +15,7 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-h1,h2,h3,h4,h5,p {
+h1,h2,h3,h4,h5,h6,p {
     color: #ffffff;
 }
 
@@ -33,6 +33,9 @@ h1,h2,h3,h4,h5,p {
 .animate-grow:focus,
 .animate-grow:active {
     transform: scale(1.1);
+}
+h2.alert-title {
+    color: #222222;
 }
 // ion-title.title-md {
 //     position: absolute;

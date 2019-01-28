@@ -1,3 +1,24 @@
 page-contact {
-
+    ion-title.title-md {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 90px 1px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  .primary{
+    color: #8C4CFA;
+  
+  }
+  .content{
+    line-height: normal;
+    text-overflow: inherit;
+    color: #666;
+    font-size: 1.2rem;
+  }
+  .card {
+    border-radius: 10px;
+  }
 }

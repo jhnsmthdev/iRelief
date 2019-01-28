@@ -18,6 +18,8 @@ export class MyApp {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
+      statusBar.backgroundColorByHexString('#8C4CFA');
+      statusBar.styleLightContent();
       splashScreen.hide();
       database.createDatabase().then((res) => {
         console.log(res, 'the database exists.')

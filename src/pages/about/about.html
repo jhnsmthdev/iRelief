@@ -26,9 +26,28 @@
     </ion-item>
     <ion-card-content>
       <ion-badge class="custom" *ngFor="let activity of entry.doc.activities">{{activity}}</ion-badge>
-      <p>{{entry.doc.note}}</p>
+      <p margin-top>{{entry.doc.note}}</p>
     </ion-card-content>
   </ion-card>
+
+  
+  <ion-fab right bottom>
+    <button ion-fab color="primary"><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab color="primary"><ion-icon name="bookmarks"></ion-icon></button>
+    </ion-fab-list>
+    <!-- <ion-fab-list side="bottom">
+      <button ion-fab color="secondary"><ion-icon name="logo-facebook"></ion-icon></button>
+    </ion-fab-list> -->
+    <ion-fab-list side="left">
+      <button (click)="createEntry()" ion-fab color="primary">
+        <img src="assets/menu/baseline_assignment_white_18dp.png" alt="">
+      </button>
+    </ion-fab-list>
+    <!-- <ion-fab-list side="right">
+      <button ion-fab color="dark"><ion-icon name="logo-twitter"></ion-icon></button>
+    </ion-fab-list> -->
+  </ion-fab>
 
 </ion-content>
  

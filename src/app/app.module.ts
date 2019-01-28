@@ -15,6 +15,7 @@ import { SelectActivitiesPage } from '../pages/select-activities/select-activiti
 import { DatabaseProvider } from '../providers/database/database';
 import { SliderPage } from '../pages/slider/slider';
 import { CreateProfilePage } from '../pages/create-profile/create-profile';
+import { JournalActionPage } from '../pages/journal-action/journal-action';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CreateProfilePage } from '../pages/create-profile/create-profile';
     SelectEmotionPage,
     SelectActivitiesPage,
     SliderPage,
-    CreateProfilePage
+    CreateProfilePage,
+    JournalActionPage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,8 @@ import { CreateProfilePage } from '../pages/create-profile/create-profile';
     SelectEmotionPage,
     SelectActivitiesPage,
     SliderPage,
-    CreateProfilePage
+    CreateProfilePage,
+    JournalActionPage
   ],
   providers: [
     StatusBar,

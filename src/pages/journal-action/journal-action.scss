@@ -1,0 +1,23 @@
+page-journal-action {
+    textarea, input{
+        width: 100%
+    }
+    textarea{
+        min-height: 60vh;
+    }
+    p,textarea{
+        color: #4e4e4e;
+        font-size: 1.1rem;
+        border: none;
+    }
+    input{
+        font-weight: bold;
+        border: none;
+    }
+    button.text-only{
+        width: 50%;
+        background: none;
+        padding: 15px;
+        color: #8C4CFA;
+    }
+}

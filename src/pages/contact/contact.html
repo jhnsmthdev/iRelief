@@ -1,17 +1,39 @@
-<ion-header>
-  <ion-navbar>
+<ion-header no-border transparent>
+  <ion-navbar color="light">
     <ion-title>
-      Contact
+      My Journal
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+<ion-content padding>
+    <ion-card >
+        <ion-item>
+          <h2  >28 January 2019</h2>
+          <p>04:05 p.m.</p>
+        </ion-item>
+        <ion-card-content>
+          <h2 class="primary">Title</h2>
+          <p class="content">Contnet</p>
+        <p text-right  class="primary">Read</p>
+        </ion-card-content>
+      </ion-card>
+    
+    <ion-fab right bottom>
+        <button ion-fab color="primary"><ion-icon name="add"></ion-icon></button>
+        <ion-fab-list side="top">
+          <button (click)="createJournal()" ion-fab color="primary"><ion-icon name="bookmarks"></ion-icon></button>
+        </ion-fab-list>
+        <!-- <ion-fab-list side="bottom">
+          <button ion-fab color="secondary"><ion-icon name="logo-facebook"></ion-icon></button>
+        </ion-fab-list> -->
+        <ion-fab-list side="left">
+          <button (click)="createEntry()" ion-fab color="primary">
+            <img src="assets/menu/baseline_assignment_white_18dp.png" alt="">
+          </button>
+        </ion-fab-list>
+        <!-- <ion-fab-list side="right">
+          <button ion-fab color="dark"><ion-icon name="logo-twitter"></ion-icon></button>
+        </ion-fab-list> -->
+      </ion-fab>
 </ion-content>
