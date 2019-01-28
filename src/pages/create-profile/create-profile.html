@@ -1,0 +1,36 @@
+<!--
+  Generated template for the CreateProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border transparent>
+
+  <ion-navbar color="light">
+    <!-- <ion-title>createProfile</ion-title> -->
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div text-center class="logo-container">
+    <img src="assets/splash_logo.png" alt="">
+    <h6 color="dark">CREATE YOUR PROFILE</h6>
+    <p>Tell me about yourself</p>
+  </div>
+
+  <ion-item>
+      <ion-label color="dark" stacked>Name</ion-label>
+      <ion-input [(ngModel)]="user.name" type="text" placeholder="Enter your name"></ion-input>
+  </ion-item>
+  <ion-item margin-top>
+      <ion-label color="dark" stacked>Gender</ion-label>
+      <ion-select [(ngModel)]="user.gender">
+          <ion-option value="Female">Female</ion-option>
+          <ion-option value="Male">Male</ion-option>
+      </ion-select>
+  </ion-item>
+  <button (click)="gotoSelectEmotion()" margin-top ion-button full round color="primary">CREATE</button>
+
+</ion-content>

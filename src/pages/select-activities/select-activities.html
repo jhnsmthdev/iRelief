@@ -1,0 +1,100 @@
+<!--
+  Generated template for the SelectActivitiesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+
+  <ion-navbar color="primary">
+    <ion-title>Activities</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="activities-background" padding>
+  <h3 text-center uppercase>WHAT HAVE YOU BEEN DOING LATELY?</h3>
+  <ion-grid text-center>
+    <ion-row>
+      <ion-col class="" (click)="selectActivity('Date')">
+          <div [ngStyle]="{'background-color': activities.indexOf('Date') >= 0 ? '#ffffffa1' : '#ffffff45'}" class="roundContainer animate-grow">
+            <img src="assets/activities/app_activity_date.png" alt="">
+          </div>
+          <p>Date</p>
+      </ion-col>
+      <ion-col class="" (click)="selectActivity('Work')">
+          <div [ngStyle]="{'background-color': activities.indexOf('Work') >= 0 ? '#ffffffa1' : '#ffffff45'}" class="roundContainer animate-grow">
+            <img src="assets/activities/app_activity_work.png" alt="">
+          </div>
+          <p>Work</p>
+      </ion-col>
+      <ion-col class="" (click)="selectActivity('Relax')">
+          <div [ngStyle]="{'background-color': activities.indexOf('Relax') >= 0 ? '#ffffffa1' : '#ffffff45'}" class="roundContainer animate-grow">
+            <img src="assets/activities/app_activity_relax.png" alt="">
+          </div>
+          <p>Relax</p>
+      </ion-col>
+      <ion-col class=""  (click)="selectActivity('Sports')">
+          <div [ngStyle]="{'background-color': activities.indexOf('Sports') >= 0 ? '#ffffffa1' : '#ffffff45'}"  class="roundContainer animate-grow">
+            <img src="assets/activities/app_activity_sports.png" alt="">
+          </div>
+          <p>Sports</p>
+      </ion-col>  
+    </ion-row>
+    <ion-row>
+        <ion-col class="" (click)="selectActivity('Party')">
+            <div [ngStyle]="{'background-color': activities.indexOf('Party') >= 0 ? '#ffffffa1' : '#ffffff45'}" class="roundContainer animate-grow">
+              <img src="assets/activities/app_activity_party.png" alt="">
+            </div>
+            <p>Date</p>
+        </ion-col>
+        <ion-col class="" (click)="selectActivity('Travel')">
+            <div [ngStyle]="{'background-color': activities.indexOf('Travel') >= 0 ? '#ffffffa1' : '#ffffff45'}" class="roundContainer animate-grow">
+              <img src="assets/activities/app_activity_travel.png" alt="">
+            </div>
+            <p>Work</p>
+        </ion-col>
+        <ion-col class="" (click)="selectActivity('Shopping')">
+            <div [ngStyle]="{'background-color': activities.indexOf('Shopping') >= 0 ? '#ffffffa1' : '#ffffff45'}" class="roundContainer animate-grow">
+              <img src="assets/activities/app_activity_shopping.png" alt="">
+            </div>
+            <p>Relax</p>
+        </ion-col>
+        <ion-col class=""  (click)="selectActivity('Friends')">
+            <div [ngStyle]="{'background-color': activities.indexOf('Friends') >= 0 ? '#ffffffa1' : '#ffffff45'}"  class="roundContainer animate-grow">
+              <img src="assets/activities/app_activity_friends.png" alt="">
+            </div>
+            <p>Sports</p>
+        </ion-col>  
+      </ion-row>
+      <ion-row>
+          <ion-col class="" (click)="selectActivity('Gaming')">
+              <div [ngStyle]="{'background-color': activities.indexOf('Gaming') >= 0 ? '#ffffffa1' : '#ffffff45'}" class="roundContainer animate-grow">
+                <img src="assets/activities/app_activity_gaming.png" alt="">
+              </div>
+              <p>Date</p>
+          </ion-col>
+          <ion-col class="" (click)="selectActivity('Cleaning')">
+              <div [ngStyle]="{'background-color': activities.indexOf('Cleaning') >= 0 ? '#ffffffa1' : '#ffffff45'}" class="roundContainer animate-grow">
+                <img src="assets/activities/app_activity_cleaning.png" alt="">
+              </div>
+              <p>Work</p>
+          </ion-col>
+          <ion-col class="" (click)="selectActivity('Movies')">
+              <div [ngStyle]="{'background-color': activities.indexOf('Movies') >= 0 ? '#ffffffa1' : '#ffffff45'}" class="roundContainer animate-grow">
+                <img src="assets/activities/app_activity_movies.png" alt="">
+              </div>
+              <p>Relax</p>
+          </ion-col>
+          <ion-col class=""  (click)="selectActivity('Reading')">
+              <div [ngStyle]="{'background-color': activities.indexOf('Reading') >= 0 ? '#ffffffa1' : '#ffffff45'}"  class="roundContainer animate-grow">
+                <img src="assets/activities/app_activity_reading.png" alt="">
+              </div>
+              <p>Sports</p>
+          </ion-col>  
+        </ion-row>
+  </ion-grid>
+  <input type="text" class="note" placeholder="Add Note" [(ngModel)]="note">
+  <button (click)="gotoTabsPage()" margin-top ion-button class="continue-btn" color="light" full round>CONTINUE</button>
+</ion-content>

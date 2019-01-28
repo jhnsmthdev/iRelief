@@ -1,0 +1,62 @@
+<!--
+  Generated template for the SelectEmotionPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header no->
+
+  <ion-navbar color="primary">
+    <ion-title>selectEmotion</ion-title>
+  </ion-navbar>
+
+</ion-header> -->
+
+
+<ion-content >
+  <div class="cover">
+    <h3 text-center uppercase>HOW DO YOU FEEL TODAY?</h3>
+  </div>
+  <ion-grid text-center class="emotions">
+    <ion-row>
+      <ion-col >
+        
+      </ion-col>
+      <ion-col (click)="selectEmotion('Joy')"  class="joy animate-grow">
+        <img [src]="emotionSelected === 'Joy' ? 'assets/emotions/app_joy_selected.png' : 'assets/emotions/app_joy.png' "   alt="">
+        <p>Joy</p>
+      </ion-col>
+      <ion-col >
+        
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col (click)="selectEmotion('Sad')"  class="sad animate-grow">
+        <img [src]="emotionSelected === 'Sad' ? 'assets/emotions/app_sad_selected.png' : 'assets/emotions/app_sad.png'" alt="">
+        <p>Sad</p>
+      </ion-col>
+      <ion-col >
+       
+      </ion-col>
+      <ion-col (click)="selectEmotion('Fear')"   class="fear animate-grow">
+        <img [src]="emotionSelected === 'Fear' ? 'assets/emotions/app_fear_selected.png' : 'assets/emotions/app_fear.png'" alt="">
+        <p>Fear</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col (click)="selectEmotion('Angry')"   class="angry animate-grow">
+        <img [src]="emotionSelected === 'Angry' ? 'assets/emotions/app_angry_selected.png' : 'assets/emotions/app_angry.png'" alt="">
+        <p>Angry</p>
+      </ion-col>
+      <ion-col (click)="selectEmotion('Disgust')"   class="disgust animate-grow">
+        <img [src]="emotionSelected === 'Disgust' ? 'assets/emotions/app_disgust_selected.png' : 'assets/emotions/app_disgust.png'" alt="">
+        <p>Disgust</p>
+      </ion-col>
+    </ion-row>
+    
+  </ion-grid>
+</ion-content>
+
+<ion-footer *ngIf="hasEmotionSelected" no-border>
+  <button (click)="goToSelectAcitivities()" class="nexBtn">NEXT</button>
+</ion-footer>

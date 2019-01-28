@@ -1,0 +1,34 @@
+<ion-header no-border transparent>
+  <!-- <ion-navbar color="light">
+    <ion-title>
+      Entries
+    </ion-title>
+  </ion-navbar> -->
+  <div class="cover">
+    <h3 uppercase>HI, {{name}}</h3>
+  </div>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card *ngFor="let entry of entries">
+    <ion-item>
+      <ion-avatar item-start>
+        <img [src]="'assets/emotions/app_' + entry.doc.emotion.toLowerCase() + '.png'">
+      </ion-avatar>
+      <h2 [class]="entry.doc.emotion.toLowerCase()" uppercase >{{entry.doc.emotion}}</h2>
+      <p>{{entry.doc.date}}</p>
+      <ion-avatar class="custom" item-end>
+        <button (click)="deleteEntry(entry.doc._id, entry.doc._rev)" class="deleteBtn" ion-button>
+          <ion-icon color name="trash"></ion-icon>
+        </button>
+      </ion-avatar>
+    </ion-item>
+    <ion-card-content>
+      <ion-badge class="custom" *ngFor="let activity of entry.doc.activities">{{activity}}</ion-badge>
+      <p>{{entry.doc.note}}</p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+ 

@@ -1,0 +1,56 @@
+page-about {
+  .cover {
+    min-height: 25vh;
+    background-image: url('../assets/splash_cover.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    h3 {
+      margin: 0;
+      position: absolute;
+      bottom: 6vh;
+      left: 4vh;
+      text-transform: uppercase;
+    }
+  }
+
+  ion-avatar.custom {
+    margin: 0 !important;
+
+  }
+
+  button.deleteBtn {
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    margin: 0;
+
+    ion-icon {
+      color: #858282;
+      font-size: 26px;
+    }
+  }
+
+  .joy {
+    color: #E77E22;
+  }
+
+  .sad {
+    color: #2C97DF;
+  }
+
+  .fear {
+    color: #7E8C8D;
+  }
+
+  .angry {
+    color: #E84C3D;
+  }
+
+  .disgust {
+    color: #51D88B;
+  }
+  ion-badge.custom {
+    margin-right: 5px;
+  }
+}
