@@ -1,0 +1,14 @@
+page-stop-watch {
+    .cover{
+        background-image: url('../assets/activities_background.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover; 
+    }
+    .canvas-container{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

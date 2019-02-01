@@ -16,6 +16,17 @@ import { DatabaseProvider } from '../providers/database/database';
 import { SliderPage } from '../pages/slider/slider';
 import { CreateProfilePage } from '../pages/create-profile/create-profile';
 import { JournalActionPage } from '../pages/journal-action/journal-action';
+import { ChangePasswordPage } from '../pages/change-password/change-password';
+import { SelectEmotionPageModule } from '../pages/select-emotion/select-emotion.module';
+import { SelectActivitiesPageModule } from '../pages/select-activities/select-activities.module';
+import { SliderPageModule } from '../pages/slider/slider.module';
+import { CreateProfilePageModule } from '../pages/create-profile/create-profile.module';
+import { JournalActionPageModule } from '../pages/journal-action/journal-action.module';
+import { ChangePasswordPageModule } from '../pages/change-password/change-password.module';
+import { HttpClientModule } from '@angular/common/http';
+import { ReadAdvicesPageModule } from '../pages/read-advices/read-advices.module';
+import { ReadAdvicesPage } from '../pages/read-advices/read-advices';
+import { StopWatchPageModule } from '../pages/stop-watch/stop-watch.module';
 
 @NgModule({
   declarations: [
@@ -24,15 +35,25 @@ import { JournalActionPage } from '../pages/journal-action/journal-action';
     ContactPage,
     HomePage,
     TabsPage,
-    SelectEmotionPage,
-    SelectActivitiesPage,
-    SliderPage,
-    CreateProfilePage,
-    JournalActionPage
+    // SelectEmotionPage,
+    // SelectActivitiesPage,
+    // SliderPage,
+    // CreateProfilePage,
+    // JournalActionPage,
+    // ChangePasswordPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpClientModule,
+    SelectEmotionPageModule,
+    SelectActivitiesPageModule,
+    SliderPageModule,
+    CreateProfilePageModule,
+    JournalActionPageModule,
+    ChangePasswordPageModule,
+    ReadAdvicesPageModule,
+    StopWatchPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -45,7 +66,9 @@ import { JournalActionPage } from '../pages/journal-action/journal-action';
     SelectActivitiesPage,
     SliderPage,
     CreateProfilePage,
-    JournalActionPage
+    JournalActionPage,
+    ChangePasswordPage,
+    ReadAdvicesPage
   ],
   providers: [
     StatusBar,

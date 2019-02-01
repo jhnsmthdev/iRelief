@@ -1,0 +1,7 @@
+{
+    "joy": ["Yoga", "Dancing", "Hiking", "Sports"],
+    "sad": ["Walking", "Running", "Zumba", "Yoga"],
+    "fear": ["Travelling", "Walking", "Hiking", "Sports"],
+    "disgust": ["Breathing Exercise", "Sports", "Bicycling", "Tai Chi"],
+    "angry": ["Boxing", "Walking", "Weight Lifting", "Skipping Rope"]
+}

@@ -1,0 +1,34 @@
+<!--
+  Generated template for the ReadAdvicesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+
+
+  <ion-navbar  color="primary">
+      <ion-buttons left>
+          <button (click)="view.dismiss()" ion-button icon-only >
+            <ion-icon name="arrow-back"></ion-icon>
+          </button>
+        </ion-buttons>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="cover" >
+  <div *ngIf="!isYoutube">
+    <div (click)="gotoStopWatch(data)" margin-bottom class="container" *ngFor="let data of datas">
+        <p no-margin>{{data}}</p>
+    </div>
+  </div>
+  <div *ngIf="isYoutube" >
+     <iframe margin-bottom *ngFor="let data of datas" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <!-- <iframe margin-bottom *ngFor="let data of datas" [src]="formatVideo('https://www.youtube.com/embed/' + data)" frameborder="0" allowfullscreen="allowfullscreen"></iframe> -->
+  </div>
+ 
+
+</ion-content>

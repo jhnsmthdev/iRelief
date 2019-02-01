@@ -51,7 +51,8 @@ export class SelectActivitiesPage {
      }
      this.database.insertEntry(this.entry).then(res => {
        console.log(res);
-       this.navCtrl.push(TabsPage);
+       this.database.currentEntryId = res.id;
+       this.navCtrl.push(TabsPage, {emotion: this.navParams.get('emotion')});
      }).catch(err => {
        alert('error: ' + err);
      })

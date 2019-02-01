@@ -50,6 +50,7 @@ export class SelectEmotionPage {
   }
   goToSelectAcitivities() {
     this.navCtrl.push(SelectActivitiesPage,{emotion: this.emotionSelected});
+    this.database.selectedEmotion = this.emotionSelected;
   }
 
 }

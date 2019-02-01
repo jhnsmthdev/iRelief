@@ -7,7 +7,7 @@ page-journal-action {
     }
     p,textarea{
         color: #4e4e4e;
-        font-size: 1.1rem;
+        // font-size: 1.1rem;
         border: none;
     }
     input{
@@ -18,6 +18,28 @@ page-journal-action {
         width: 50%;
         background: none;
         padding: 15px;
+    }
+    .SAVE,.EDIT {
         color: #8C4CFA;
+        font-weight: bold;
+    }
+    .DELETE{
+        color: #f53d3d;
+        font-weight: bold;
+    }
+    .CANCEL,.BACK {
+        color: #4e4e4e;
+    }
+    ion-title.title-md {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0 90px 1px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    .time {
+        margin-left: 2px;
     }
 }

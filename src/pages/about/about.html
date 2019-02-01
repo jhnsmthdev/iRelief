@@ -11,22 +11,27 @@
 
 <ion-content padding>
 
-  <ion-card *ngFor="let entry of entries">
-    <ion-item>
+  <ion-card (click)="selectEntry(entry.doc._id)" [color]="currentEntryId === entry.doc._id ? 'lightgrey' : 'light'" *ngFor="let entry of entries">
+    <ion-item [color]="currentEntryId === entry.id ? 'lightgrey' : 'light'"> 
       <ion-avatar item-start>
         <img [src]="'assets/emotions/app_' + entry.doc.emotion.toLowerCase() + '.png'">
       </ion-avatar>
       <h2 [class]="entry.doc.emotion.toLowerCase()" uppercase >{{entry.doc.emotion}}</h2>
-      <p>{{entry.doc.date}}</p>
+      <p>{{formatDate(entry.doc.date)}}</p>
+      <p class="time">{{formatTime(entry.doc.date)}}</p>
       <ion-avatar class="custom" item-end>
-        <button (click)="deleteEntry(entry.doc._id, entry.doc._rev)" class="deleteBtn" ion-button>
+        <button (click)="deleteEntry(entry.doc._id, entry.doc._rev, $event)" class="deleteBtn" ion-button>
           <ion-icon color name="trash"></ion-icon>
         </button>
       </ion-avatar>
     </ion-item>
     <ion-card-content>
-      <ion-badge class="custom" *ngFor="let activity of entry.doc.activities">{{activity}}</ion-badge>
-      <p margin-top>{{entry.doc.note}}</p>
+      <div margin-bottom>
+        <ion-badge class="custom" *ngFor="let activity of entry.doc.activities">{{activity}}</ion-badge>
+      </div>
+      <p  margin-bottom *ngIf="entry.doc.note.length > 0" >Note: {{entry.doc.note}}</p>
+      <p *ngIf="entry.doc.logs.length > 0">Activities you've done:</p>
+      <p  text-capitalize *ngFor="let log of entry.doc.logs"> <span>{{ log.activity }}</span><span float-right>{{formatDateActivity(log.date)}}, {{formatTime(log.date)}}</span></p>
     </ion-card-content>
   </ion-card>
 
@@ -34,7 +39,7 @@
   <ion-fab right bottom>
     <button ion-fab color="primary"><ion-icon name="add"></ion-icon></button>
     <ion-fab-list side="top">
-      <button ion-fab color="primary"><ion-icon name="bookmarks"></ion-icon></button>
+      <button (click)="createJournal()" ion-fab color="primary"><ion-icon name="bookmarks"></ion-icon></button>
     </ion-fab-list>
     <!-- <ion-fab-list side="bottom">
       <button ion-fab color="secondary"><ion-icon name="logo-facebook"></ion-icon></button>

@@ -1,0 +1,7 @@
+{
+    "joy": ["Make your own art/drawing.", "Finger paint.", "Draw with your eyes close","Draw in sand."],
+    "sad": ["Let yourself be free.", "Do meditation.", "Watch the sunrise.", "Massage."],
+    "fear": ["Face your fear and embrace it.", "Inhale and exhale relaxation.", "Think of positive thoughts.", "Listen to relaxing music."],
+    "disgust": ["Go for walk in nature.", "Do deep abdominal breathing.", "Try stress balls.", "Hug a tree."],
+    "angry": ["Take a hot/warm shower.", "Go for a swim.", "Massaging.", "Spend time with your pets."]
+}

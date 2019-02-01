@@ -13,26 +13,46 @@
       <p>It helps you to relax and clear your mind</p>
     </ion-col>
    </ion-row>
-   <ion-row margin-to text-center>
-      <ion-col>
-        <img src="assets/advices/img_advices1.jpg" alt="">
+   <ion-row margin-top text-center>
+      <ion-col >
+        <div class="advices1 bg">
+            <button (click)="goToReadAdvices()" color="light" ion-button small outline >
+                Read Advices
+            </button>
+        </div>
+        <!-- <img src="assets/advices/img_advices1.jpg" alt=""> -->
       </ion-col>
       <ion-col>
-        <img src="assets/advices/img_advices2.jpg" alt="">
+          <div class="advices2 bg fontBtn11">
+              <button  (click)="goToMotivateYourSelf()"  color="light" ion-button small outline >
+                 Motivate Yourself
+              </button>
+          </div>
+        <!-- <img src="assets/advices/img_advices2.jpg" alt=""> -->
       </ion-col>
    </ion-row>
    <ion-row margin-top text-center>
       <ion-col >
-        <h6>ACTIVITIES</h6>
+        <h6>EXERCICES</h6>
         <p>Try this workout and exercises to boost yor energy</p>
       </ion-col>
      </ion-row>
      <ion-row  margin-top text-center>
         <ion-col>
-          <img src="assets/activities/img_activity1.jpg" alt="">
+            <div class="activity1 bg fontBtn11">
+                <button (click)="goToStretchYourMuscles()" class="fontBtn9" color="light" ion-button small outline >
+                   Stretch your muscles
+                </button>
+            </div>
+          <!-- <img src="assets/activities/img_activity1.jpg" alt=""> -->
         </ion-col>
         <ion-col>
-          <img src="assets/activities/img_activity2.jpg" alt="">
+          <!-- <img src="assets/activities/img_activity2.jpg" alt=""> -->
+          <div class="activity2 bg">
+              <button (click)="goToRelax()" color="light" ion-button small outline >
+                 Relax
+              </button>
+          </div>
         </ion-col>
      </ion-row>
      <ion-row margin-top text-center>
@@ -43,11 +63,38 @@
        </ion-row>
        <ion-row  margin-top  text-center>
           <ion-col>
-            <img src="assets/music_video/img_musicvideo1.jpg" alt="">
+              <div class="musicVideo1 bg">
+                  <button (click)="goToListenMusics()" class="fontBtn11" color="light" ion-button small outline >
+                     Listen to music
+                  </button>
+              </div>
+            <!-- <img src="assets/music_video/img_musicvideo1.jpg" alt=""> -->
           </ion-col>
           <ion-col>
-            <img src="assets/music_video/img_musicvideo2.jpg" alt="">
+            <!-- <img src="assets/music_video/img_musicvideo2.jpg" alt=""> -->
+            <div class="musicVideo2 bg">
+                <button (click)="goToWachVideos()" class="fontBtn11" color="light" ion-button small outline >
+                   Watch motivations
+                </button>
+            </div>
           </ion-col>
        </ion-row>
  </ion-grid>
+ <ion-fab right bottom>
+    <button ion-fab color="primary"><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button (click)="createJournal()" ion-fab color="primary"><ion-icon name="bookmarks"></ion-icon></button>
+    </ion-fab-list>
+    <!-- <ion-fab-list side="bottom">
+      <button ion-fab color="secondary"><ion-icon name="logo-facebook"></ion-icon></button>
+    </ion-fab-list> -->
+    <ion-fab-list side="left">
+      <button (click)="createEntry()" ion-fab color="primary">
+        <img src="assets/menu/baseline_assignment_white_18dp.png" alt="">
+      </button>
+    </ion-fab-list>
+    <!-- <ion-fab-list side="right">
+      <button ion-fab color="dark"><ion-icon name="logo-twitter"></ion-icon></button>
+    </ion-fab-list> -->
+  </ion-fab>
 </ion-content>

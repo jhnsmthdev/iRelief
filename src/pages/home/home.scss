@@ -4,6 +4,40 @@ page-home {
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
+        .advices1 {
+            background-image: url('../assets/advices/img_advices1.jpg');
+        }
+        .advices2 {
+            background-image: url('../assets/advices/img_advices2.jpg');
+        }
+        .activity1 {
+            background-image: url('../assets/activities/img_activity1.jpg');
+        }
+        .activity2 {
+            background-image: url('../assets/activities/img_activity2.jpg');
+        }
+        .musicVideo1 {
+            background-image: url('../assets/music_video/img_musicvideo1.jpg');
+        }
+        .musicVideo2 {
+            background-image: url('../assets/music_video/img_musicvideo2.jpg');
+        }
+        
+        .bg{
+            padding: 45px 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .fontBtn11{
+            span{
+                font-size: 11px;
+            }
+        }
+        .fontBtn9{
+            span{
+                font-size: 9px;
+            }
+        }
     }
 
     ion-row {
