@@ -168,4 +168,27 @@ export class DatabaseProvider {
      this.entriesSource.next(entries);
     })  
     }
+
+  refreshActivities() {
+    this.getAllAdvices().subscribe( res => {
+      this.advicesSource.next(res);
+    } );
+    this.getAllMotivations().subscribe( res => {
+      this.motivationsSource.next(res);
+    })
+    this.getAllStrechMuscles().subscribe( res => {
+      this.strecthMusclesSource.next(res);
+    })
+    this.getAllRelax().subscribe( res => {
+      this.relaxSource.next(res);
+    })
+    this.getAllVideos().subscribe( res => {
+      this.videosSource.next(res);
+    })
+    this.getAllMusics().subscribe( res => {
+      this.musicsSource.next(res);
+    })
+
+
+  }
   }

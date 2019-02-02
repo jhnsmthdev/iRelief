@@ -103,9 +103,11 @@ export class AboutPage {
       }
     })
   }
-  selectEntry(id) {
+  selectEntry(id, emotion) {
     this.database.currentEntryId = id;
+    this.database.selectedEmotion = emotion;
     this.currentEntryId = id;
+    this.database.refreshActivities();
     this.navCtrl.parent.select(0);
   }
   formatDateActivity(timestamp){

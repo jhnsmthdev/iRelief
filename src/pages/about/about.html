@@ -11,7 +11,7 @@
 
 <ion-content padding>
 
-  <ion-card (click)="selectEntry(entry.doc._id)" [color]="currentEntryId === entry.doc._id ? 'lightgrey' : 'light'" *ngFor="let entry of entries">
+  <ion-card (click)="selectEntry(entry.doc._id, entry.doc.emotion)" [color]="currentEntryId === entry.doc._id ? 'lightgrey' : 'light'" *ngFor="let entry of entries">
     <ion-item [color]="currentEntryId === entry.id ? 'lightgrey' : 'light'"> 
       <ion-avatar item-start>
         <img [src]="'assets/emotions/app_' + entry.doc.emotion.toLowerCase() + '.png'">
